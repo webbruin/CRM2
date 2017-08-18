@@ -1,0 +1,154 @@
+html, body, div, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  font-family: 微软雅黑;
+}
+img{
+  display: block;
+  border: 0;
+}
+ul,ol{
+  li{
+    list-style: none;
+  }
+}
+a{
+  text-decoration: none;
+}
+
+#app {
+  background: #f2f2f2;
+  $headerHeight:60px;
+  $contentHeight:880px;
+  .container{
+    header{
+      height: $headerHeight;
+      background: #fff;
+      padding: 0 50px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+      .header_logo{
+        a{
+          line-height: $headerHeight;
+          img{
+            height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+        span{
+          font-size: 18px;
+          padding: 0 20px;
+        }
+      }
+      .header_usn{
+        display: flex;
+        align-items:center;
+        cursor: pointer;
+        li{
+          margin: 0 5px;
+        }
+        .header_avatar1{
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          img{
+            width: 42px;
+            height: 42px;
+          }
+        }
+      }
+    }
+
+
+    .msg_select{
+      position: absolute;
+      top:-130px;
+      right:50px;
+      z-index: 1;
+      background: #fff;
+      border: 1px solid #ccc;
+      li{
+        padding: 10px 20px;
+        a{
+          display: flex;
+          align-items:center;
+          color: #ccc;
+          font-size:14px;
+          span{
+            padding-right: 10px;
+          }
+        }
+        &:hover{
+          background: #eee;
+          a{
+            color: #000;
+          }
+        }
+      }
+    }
+
+
+    section{
+      width: 100%;
+      height: $contentHeight;
+      overflow: hidden;
+      aside{
+        width: 14%;
+        height: 100%;
+        background: #2f353f;
+        float: left;
+        ul{
+          li{
+            margin-bottom: 1px;
+            a{
+              height:45px;
+              display: flex;
+              align-items:center;
+              color: #fff;
+              font-size: 13px;
+              justify-content: center;
+              position: relative;
+            }
+            ul{
+              height: 0;
+              overflow: hidden;
+              li{
+                &:hover{
+                  a{
+                    color: #ff7869;
+                  }
+
+                }
+              }
+              li{
+                a.active{
+                  color: #f00;
+                }
+              }
+            }
+          }
+        }
+        .tree{
+          >li{
+            >a{
+              background: #333;
+            }
+          }
+        }
+      }
+      article{
+        width: 85.4%;
+        height: 100%;
+        background: blue;
+        float: right;
+      }
+    }
+  }
+}
